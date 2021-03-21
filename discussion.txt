@@ -1,0 +1,115 @@
+Discussion
+----------
+
+1. Which would be the most efficient data structure for a data set with the
+   following requirements:
+
+  - frequently removing and adding items to the beginning of the data structure
+
+  - frequently removing and adding items to the end of the data structure
+
+  - rarely indexing and searching
+
+  A. A Python list B. Singly linked list C. Doubly linked list
+
+  Explain your answer.
+
+
+
+Singly or doubly linked list as they have a runtime of O91) for appending to end, insetion/deletion from beginning 
+and O(n) for poping items off the end. Compared to lists which have a runtime for append/pop from end of O(1) but for insertion/deletion from beginning a runtime of O(n).
+A python list would be better for getting an item by index. 
+
+
+
+
+2. Which would be the most efficient data structure for a data set with the
+   following requirements:
+
+  - order is unimportant
+
+  -frequently adding and removing items
+
+  - frequently looking up items
+
+  A. A Python list  B. A Dictionary  C. Deque  D. Binary Search Tree
+
+  Explain your answer.
+
+Dictionary because order is not necessarily important and the runtime for getting/inserting/deleting itmes are all O(1). Making it constant time and quite efficient. 
+Lists, Deques, and BSTs all require order and have slower runtimes in regards to insertion/deletion. 
+
+
+
+
+
+
+3. Explain why looking up, adding elements, and removing elements from a 
+   dictionary or hash map are all O(1) operations.
+Because the dictionary keys/hash map have unique keys (hopefully) which makes them more assessible - if you know the key you can go directly to it. 
+If two keys are entered that are the same - things can get a bit tricky (aka collusion)
+
+
+
+
+
+4. Explain why removing elements from or adding elements to an arbitrary
+   location in a Python list are O(n) operations.
+
+Because worst case you may have to iterate over the whole list if you do not know the index of before/after point you want
+to insert new element or delete an element at arbitrary position. 
+
+
+
+
+
+5. What is the correct runtime for:
+
+  - Bubble Sort? O(n^2)/Quadratic
+
+  - Quicksort? O(n log n)
+
+  - Merge Sort? O(n log n) 
+
+  - Insertion Sort? O(n^2)/Quadratic
+
+
+6. What is the difference between a tree and a graph?
+
+-Graphs are like trees, except they can contain loops(cycles). Relationships within a graph can be 
+directed or undirected. 
+-Graphs also contain vertex/nodes, edges, adjacency, adjacency Lists, and weight(which is optional).
+-Graphs model relationships between items. 
+-Graphs do not have hierarchy. 
+-All trees are graphs, but not all graphs are trees. 
+-Trees are directed and acyclic graphs and they DO have hierarchy. They have only one designated root node.
+
+
+
+
+7. Using the Python implementation of Quicksort from the instructions:
+
+  Given the list [8, 4, 1, 6, 5, 2, 7, 3]:
+  When this function is initially called, what are the values of:
+
+
+
+    - lst -  [8, 4, 1, 6, 5, 2, 7, 3]
+
+    - pivot -  [8, 4, 1, 6, 5, 2, 7, 3][4] (where 4 is the index at half of the list)
+
+    - lo - [4,1,2,3] (all numbers less than the pivot num of 5)
+    - hi - [6, 8, 7] (all nums above the pivot num of 5)
+
+
+
+  When the quicksort is first called recursively on the `lo` list, what are the
+  values of:
+      
+  - lst - 'lo'  [4,1,2,3]   ----> mid = int(len[4,1,2,3]/2) 
+
+  - pivot - [4,1,2,3][2]
+
+  - lo - [1]
+
+  - hi - [4,3] everything that is higher than the pivot num 2 element[2]
